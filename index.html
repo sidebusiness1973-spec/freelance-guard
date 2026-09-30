@@ -18,7 +18,9 @@
 
 *{box-sizing:border-box}
 
-html{scroll-behavior:smooth}
+html{
+  scroll-behavior:smooth;
+}
 
 body{
   margin:0;
@@ -174,6 +176,45 @@ h2{
   color:#475467;
 }
 
+/* アプリ画面 */
+
+.screenshot-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+  align-items:start;
+}
+
+.screenshot-card{
+  text-align:center;
+}
+
+.phone{
+  max-width:300px;
+  margin:0 auto 22px;
+  padding:9px;
+  background:#111827;
+  border-radius:34px;
+  box-shadow:0 22px 55px rgba(15,23,42,.18);
+}
+
+.phone img{
+  width:100%;
+  display:block;
+  border-radius:26px;
+}
+
+.screenshot-card h3{
+  margin:0 0 8px;
+  font-size:20px;
+}
+
+.screenshot-card p{
+  margin:0 auto;
+  max-width:320px;
+  color:var(--muted);
+}
+
 .checklist{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -229,12 +270,39 @@ footer{
 }
 
 @media(max-width:800px){
-  .grid{grid-template-columns:1fr}
-  .checklist{grid-template-columns:1fr}
-  .navlinks{display:none}
-  .hero{padding:72px 0 56px}
-  section{padding:54px 0}
-  h2{font-size:29px}
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .screenshot-grid{
+    grid-template-columns:1fr;
+    gap:48px;
+  }
+
+  .checklist{
+    grid-template-columns:1fr;
+  }
+
+  .navlinks{
+    display:none;
+  }
+
+  .hero{
+    padding:72px 0 56px;
+  }
+
+  section{
+    padding:54px 0;
+  }
+
+  h2{
+    font-size:29px;
+  }
+
+  .phone{
+    max-width:280px;
+  }
 }
 </style>
 </head>
@@ -242,233 +310,336 @@ footer{
 <body>
 
 <header>
-  <div class="wrap">
-    <nav>
-      <div class="brand">フリーランス守りナビ</div>
-      <div class="navlinks">
-        <a href="#features">主な機能</a>
-        <a href="#target">こんな方に</a>
-        <a href="#support">サポート</a>
-      </div>
-    </nav>
-  </div>
+<div class="wrap">
+<nav>
+
+<div class="brand">
+フリーランス守りナビ
+</div>
+
+<div class="navlinks">
+<a href="#features">主な機能</a>
+<a href="#screens">アプリ画面</a>
+<a href="#target">こんな方に</a>
+<a href="#support">サポート</a>
+</div>
+
+</nav>
+</div>
 </header>
+
 
 <main>
 
 <section class="hero">
-  <div class="wrap">
 
-    <span class="eyebrow">
-      フリーランス・業務委託のための記録支援アプリ
-    </span>
+<div class="wrap">
 
-    <h1>
-      働き方を、<br>
-      記録で守る。
-    </h1>
+<span class="eyebrow">
+フリーランス・業務委託のための記録支援アプリ
+</span>
 
-    <p class="lead">
-      「フリーランス守りナビ」は、
-      働き方チェック・勤務記録・証拠整理・相談準備をひとつにまとめ、
-      万一のトラブルに備えるためのアプリです。
-    </p>
+<h1>
+働き方を、<br>
+記録で守る。
+</h1>
 
-    <div class="cta">
-      <span class="btn disabled">
-        App Store 公開準備中
-      </span>
+<p class="lead">
+「フリーランス守りナビ」は、
+働き方チェック・勤務記録・証拠整理・相談準備をひとつにまとめ、
+万一のトラブルに備えるためのアプリです。
+</p>
 
-      <a class="btn secondary" href="#features">
-        機能を見る
-      </a>
-    </div>
+<div class="cta">
 
-  </div>
+<span class="btn disabled">
+App Store 公開準備中
+</span>
+
+<a class="btn secondary" href="#screens">
+アプリ画面を見る
+</a>
+
+</div>
+
+</div>
+
 </section>
 
 
 <section id="features">
-  <div class="wrap">
 
-    <h2>主な機能</h2>
+<div class="wrap">
 
-    <p class="sub">
-      日々の記録から相談前の整理まで、必要な情報をまとめて管理。
-    </p>
+<h2>主な機能</h2>
 
-    <div class="grid">
+<p class="sub">
+日々の記録から相談前の整理まで、必要な情報をまとめて管理。
+</p>
 
-      <div class="card">
-        <div class="icon">✓</div>
-        <h3>働き方チェック</h3>
-        <p>
-          勤務時間、場所、指示、シフトなどから
-          自分の働き方を整理します。
-        </p>
-      </div>
+<div class="grid">
 
-      <div class="card">
-        <div class="icon">🕒</div>
-        <h3>勤務記録</h3>
-        <p>
-          日々の勤務状況を残し、
-          後から振り返れるようにします。
-        </p>
-      </div>
+<div class="card">
+<div class="icon">✓</div>
+<h3>働き方チェック</h3>
+<p>
+勤務時間、場所、指示、シフトなどから
+自分の働き方を整理します。
+</p>
+</div>
 
-      <div class="card">
-        <div class="icon">🗂</div>
-        <h3>証拠メモ</h3>
-        <p>
-          やり取りや出来事を時系列でメモし、
-          必要な情報を整理します。
-        </p>
-      </div>
+<div class="card">
+<div class="icon">🕒</div>
+<h3>勤務記録</h3>
+<p>
+日々の勤務状況を残し、
+後から振り返れるようにします。
+</p>
+</div>
 
-      <div class="card">
-        <div class="icon">📅</div>
-        <h3>重要日・期限管理</h3>
-        <p>
-          回答期限、支払日、契約更新日などの
-          重要日を管理します。
-        </p>
-      </div>
+<div class="card">
+<div class="icon">🗂</div>
+<h3>証拠メモ</h3>
+<p>
+やり取りや出来事を時系列でメモし、
+必要な情報を整理します。
+</p>
+</div>
 
-      <div class="card">
-        <div class="icon">📄</div>
-        <h3>レポート</h3>
-        <p>
-          保存した情報を見返しやすい形にまとめることを支援します。
-        </p>
-      </div>
+<div class="card">
+<div class="icon">📅</div>
+<h3>重要日・期限管理</h3>
+<p>
+回答期限、支払日、契約更新日などの
+重要日を管理します。
+</p>
+</div>
 
-      <div class="card">
-        <div class="icon">💬</div>
-        <h3>相談前の情報整理</h3>
-        <p>
-          専門機関へ相談する前に、
-          経緯や記録を整理しやすくします。
-        </p>
-      </div>
+<div class="card">
+<div class="icon">📄</div>
+<h3>レポート</h3>
+<p>
+保存した情報を見返しやすい形に
+まとめることを支援します。
+</p>
+</div>
 
-    </div>
+<div class="card">
+<div class="icon">💬</div>
+<h3>相談前の情報整理</h3>
+<p>
+専門機関へ相談する前に、
+経緯や記録を整理しやすくします。
+</p>
+</div>
 
-  </div>
+</div>
+</div>
+
+</section>
+
+
+<section id="screens">
+
+<div class="wrap">
+
+<h2>実際のアプリ画面</h2>
+
+<p class="sub">
+日々の記録から働き方の確認、証拠整理まで。
+実際のiPhone画面をご覧いただけます。
+</p>
+
+<div class="screenshot-grid">
+
+<div class="screenshot-card">
+
+<div class="phone">
+<img
+src="app-home.png"
+alt="フリーランス守りナビ ホーム画面"
+loading="lazy">
+</div>
+
+<h3>ホーム</h3>
+
+<p>
+勤務記録・証拠整理・期限管理・相談準備まで、
+必要な情報をひとつの場所で確認できます。
+</p>
+
+</div>
+
+
+<div class="screenshot-card">
+
+<div class="phone">
+<img
+src="app-features.png"
+alt="フリーランス守りナビ 機能一覧"
+loading="lazy">
+</div>
+
+<h3>働き方をチェック</h3>
+
+<p>
+働き方チェックやフリーランス法チェック、
+勤務記録・証拠メモなどへすぐアクセスできます。
+</p>
+
+</div>
+
+
+<div class="screenshot-card">
+
+<div class="phone">
+<img
+src="app-evidence.png"
+alt="フリーランス守りナビ 証拠メモ入力画面"
+loading="lazy">
+</div>
+
+<h3>証拠・メモを記録</h3>
+
+<p>
+LINE・Slack・メール・勤務指示など、
+重要なやり取りを整理して記録できます。
+</p>
+
+</div>
+
+</div>
+</div>
+
 </section>
 
 
 <section id="target">
-  <div class="wrap">
 
-    <h2>こんな方に</h2>
+<div class="wrap">
 
-    <p class="sub">
-      業務委託・フリーランスとして働く中で、
-      少しでも「これで大丈夫かな」と感じたら。
-    </p>
+<h2>こんな方に</h2>
 
-    <div class="checklist">
+<p class="sub">
+業務委託・フリーランスとして働く中で、
+少しでも「これで大丈夫かな」と感じたら。
+</p>
 
-      <div class="check">
-        業務委託なのに勤務時間や出社日を指定されている
-      </div>
+<div class="checklist">
 
-      <div class="check">
-        定例ミーティングへの参加を求められている
-      </div>
+<div class="check">
+業務委託なのに勤務時間や出社日を指定されている
+</div>
 
-      <div class="check">
-        シフト提出や細かい業務指示がある
-      </div>
+<div class="check">
+定例ミーティングへの参加を求められている
+</div>
 
-      <div class="check">
-        突然の契約解除に不安がある
-      </div>
+<div class="check">
+シフト提出や細かい業務指示がある
+</div>
 
-      <div class="check">
-        報酬や契約条件の記録を残しておきたい
-      </div>
+<div class="check">
+突然の契約解除に不安がある
+</div>
 
-      <div class="check">
-        万一のトラブルに備えて証拠を整理しておきたい
-      </div>
+<div class="check">
+報酬や契約条件の記録を残しておきたい
+</div>
 
-    </div>
+<div class="check">
+万一のトラブルに備えて証拠を整理しておきたい
+</div>
 
-  </div>
+</div>
+
+</div>
+
 </section>
 
 
 <section>
-  <div class="wrap">
 
-    <h2>対応OS</h2>
+<div class="wrap">
 
-    <p class="sub">
-      Apple製品で使いやすく。
-    </p>
+<h2>対応OS</h2>
 
-    <div class="os">
-      <span class="pill">iPhone</span>
-      <span class="pill">Mac</span>
-    </div>
+<p class="sub">
+Apple製品で使いやすく。
+</p>
 
-  </div>
+<div class="os">
+
+<span class="pill">
+iPhone
+</span>
+
+<span class="pill">
+Mac
+</span>
+
+</div>
+
+</div>
+
 </section>
 
 
 <section id="support">
-  <div class="wrap">
 
-    <h2>サポート</h2>
+<div class="wrap">
 
-    <p class="sub">
-      不具合報告・ご意見・機能改善のご要望はこちらから。
-    </p>
+<h2>サポート</h2>
 
-    <div class="notice">
-      GitHub Issuesで受け付けます。
-      個人情報・機密情報・契約書の全文などは、
-      公開Issueへ投稿しないでください。
-    </div>
+<p class="sub">
+不具合報告・ご意見・機能改善のご要望はこちらから。
+</p>
 
-    <div class="links">
+<div class="notice">
+GitHub Issuesで受け付けます。
+個人情報・機密情報・契約書の全文などは、
+公開Issueへ投稿しないでください。
+</div>
 
-      <a
-        class="btn primary"
-        href="https://github.com/sidebusiness1973-spec/freelance-guard/issues"
-        target="_blank"
-        rel="noopener">
-        GitHub Issuesを開く
-      </a>
+<div class="links">
 
-      <a class="btn secondary" href="privacy.html">
-        プライバシーポリシー
-      </a>
+<a
+class="btn primary"
+href="https://github.com/sidebusiness1973-spec/freelance-guard/issues"
+target="_blank"
+rel="noopener">
+GitHub Issuesを開く
+</a>
 
-      <a class="btn secondary" href="support.html">
-        サポート案内
-      </a>
+<a class="btn secondary" href="privacy.html">
+プライバシーポリシー
+</a>
 
-    </div>
+<a class="btn secondary" href="support.html">
+サポート案内
+</a>
 
-  </div>
+</div>
+
+</div>
+
 </section>
 
 
 <section>
-  <div class="wrap">
 
-    <h2>免責事項</h2>
+<div class="wrap">
 
-    <div class="notice">
-      本アプリは、法律相談や個別の法的判断を提供するものではありません。
-      必要に応じて、弁護士、労働局、労働基準監督署などの専門機関へ
-      ご相談ください。
-    </div>
+<h2>免責事項</h2>
 
-  </div>
+<div class="notice">
+本アプリは、法律相談や個別の法的判断を提供するものではありません。
+必要に応じて、弁護士、労働局、労働基準監督署などの専門機関へ
+ご相談ください。
+</div>
+
+</div>
+
 </section>
 
 </main>
@@ -476,23 +647,23 @@ footer{
 
 <footer>
 
-  <div class="wrap">
+<div class="wrap">
 
-    <div class="footrow">
+<div class="footrow">
 
-      <span>
-        © 2026 Freelance Guard
-      </span>
+<span>
+© 2026 Freelance Guard
+</span>
 
-      <span>
-        <a href="privacy.html">プライバシー</a>
-        ・
-        <a href="support.html">サポート</a>
-      </span>
+<span>
+<a href="privacy.html">プライバシー</a>
+・
+<a href="support.html">サポート</a>
+</span>
 
-    </div>
+</div>
 
-  </div>
+</div>
 
 </footer>
 
