@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="フリーランス・業務委託で働く方のための、働き方チェック・勤務記録・証拠整理・相談準備を支援するアプリ「フリーランス守りナビ」。">
+<title>フリーランス守りナビ</title>
+
+<style>
+:root{
+  --blue:#0a66d9;
+  --blue2:#eaf3ff;
+  --ink:#172033;
+  --muted:#667085;
+  --line:#e7ebf0;
+  --soft:#f7f9fc;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic UI","Yu Gothic",sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.75;
+}
+
+a{
+  color:var(--blue);
+  text-decoration:none;
+}
+
+a:hover{
+  text-decoration:underline;
+}
+
+.wrap{
+  max-width:1080px;
+  margin:auto;
+  padding:0 24px;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid var(--line);
+}
+
+nav{
+  height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.brand{
+  font-weight:800;
+}
+
+.navlinks{
+  display:flex;
+  gap:20px;
+  font-size:14px;
+}
+
+.hero{
+  padding:96px 0 76px;
+  background:linear-gradient(180deg,#fff 0%,#f5f9ff 100%);
+}
+
+.eyebrow{
+  display:inline-block;
+  padding:6px 12px;
+  border-radius:999px;
+  background:var(--blue2);
+  color:var(--blue);
+  font-size:13px;
+  font-weight:700;
+}
+
+h1{
+  font-size:clamp(42px,7vw,74px);
+  line-height:1.08;
+  letter-spacing:-.04em;
+  margin:20px 0 18px;
+}
+
+.lead{
+  font-size:clamp(18px,2.4vw,24px);
+  color:#344054;
+  max-width:780px;
+  margin:0;
+}
+
+.cta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:30px;
+}
+
+.btn{
+  display:inline-block;
+  padding:13px 19px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  font-weight:700;
+}
+
+.primary{
+  background:var(--blue);
+  color:#fff;
+  border-color:var(--blue);
+}
+
+.secondary{
+  background:#fff;
+}
+
+.disabled{
+  background:#eef1f5;
+  color:#8b94a3;
+  cursor:default;
+}
+
+section{
+  padding:72px 0;
+  border-top:1px solid var(--line);
+}
+
+h2{
+  font-size:34px;
+  margin:0 0 8px;
+}
+
+.sub{
+  color:var(--muted);
+  margin:0 0 30px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.card{
+  padding:24px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#fff;
+  box-shadow:0 10px 30px rgba(15,23,42,.045);
+}
+
+.icon{
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+.card h3{
+  margin:0 0 8px;
+  font-size:19px;
+}
+
+.card p{
+  margin:0;
+  color:#475467;
+}
+
+.checklist{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px 22px;
+}
+
+.check{
+  padding:16px 18px;
+  border-radius:14px;
+  background:var(--soft);
+}
+
+.os{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.pill{
+  padding:11px 17px;
+  border-radius:999px;
+  background:var(--blue2);
+  color:var(--blue);
+  font-weight:700;
+}
+
+.notice{
+  padding:20px 22px;
+  border-left:4px solid var(--blue);
+  background:#f8fbff;
+  border-radius:10px;
+}
+
+.links{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:18px;
+}
+
+footer{
+  padding:36px 0 52px;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font-size:14px;
+}
+
+.footrow{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+@media(max-width:800px){
+  .grid{grid-template-columns:1fr}
+  .checklist{grid-template-columns:1fr}
+  .navlinks{display:none}
+  .hero{padding:72px 0 56px}
+  section{padding:54px 0}
+  h2{font-size:29px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <div class="brand">フリーランス守りナビ</div>
+      <div class="navlinks">
+        <a href="#features">主な機能</a>
+        <a href="#target">こんな方に</a>
+        <a href="#support">サポート</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap">
+
+    <span class="eyebrow">
+      フリーランス・業務委託のための記録支援アプリ
+    </span>
+
+    <h1>
+      働き方を、<br>
+      記録で守る。
+    </h1>
+
+    <p class="lead">
+      「フリーランス守りナビ」は、
+      働き方チェック・勤務記録・証拠整理・相談準備をひとつにまとめ、
+      万一のトラブルに備えるためのアプリです。
+    </p>
+
+    <div class="cta">
+      <span class="btn disabled">
+        App Store 公開準備中
+      </span>
+
+      <a class="btn secondary" href="#features">
+        機能を見る
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="features">
+  <div class="wrap">
+
+    <h2>主な機能</h2>
+
+    <p class="sub">
+      日々の記録から相談前の整理まで、必要な情報をまとめて管理。
+    </p>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="icon">✓</div>
+        <h3>働き方チェック</h3>
+        <p>
+          勤務時間、場所、指示、シフトなどから
+          自分の働き方を整理します。
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🕒</div>
+        <h3>勤務記録</h3>
+        <p>
+          日々の勤務状況を残し、
+          後から振り返れるようにします。
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🗂</div>
+        <h3>証拠メモ</h3>
+        <p>
+          やり取りや出来事を時系列でメモし、
+          必要な情報を整理します。
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📅</div>
+        <h3>重要日・期限管理</h3>
+        <p>
+          回答期限、支払日、契約更新日などの
+          重要日を管理します。
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📄</div>
+        <h3>レポート</h3>
+        <p>
+          保存した情報を見返しやすい形にまとめることを支援します。
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">💬</div>
+        <h3>相談前の情報整理</h3>
+        <p>
+          専門機関へ相談する前に、
+          経緯や記録を整理しやすくします。
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section id="target">
+  <div class="wrap">
+
+    <h2>こんな方に</h2>
+
+    <p class="sub">
+      業務委託・フリーランスとして働く中で、
+      少しでも「これで大丈夫かな」と感じたら。
+    </p>
+
+    <div class="checklist">
+
+      <div class="check">
+        業務委託なのに勤務時間や出社日を指定されている
+      </div>
+
+      <div class="check">
+        定例ミーティングへの参加を求められている
+      </div>
+
+      <div class="check">
+        シフト提出や細かい業務指示がある
+      </div>
+
+      <div class="check">
+        突然の契約解除に不安がある
+      </div>
+
+      <div class="check">
+        報酬や契約条件の記録を残しておきたい
+      </div>
+
+      <div class="check">
+        万一のトラブルに備えて証拠を整理しておきたい
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section>
+  <div class="wrap">
+
+    <h2>対応OS</h2>
+
+    <p class="sub">
+      Apple製品で使いやすく。
+    </p>
+
+    <div class="os">
+      <span class="pill">iPhone</span>
+      <span class="pill">Mac</span>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="support">
+  <div class="wrap">
+
+    <h2>サポート</h2>
+
+    <p class="sub">
+      不具合報告・ご意見・機能改善のご要望はこちらから。
+    </p>
+
+    <div class="notice">
+      GitHub Issuesで受け付けます。
+      個人情報・機密情報・契約書の全文などは、
+      公開Issueへ投稿しないでください。
+    </div>
+
+    <div class="links">
+
+      <a
+        class="btn primary"
+        href="https://github.com/sidebusiness1973-spec/freelance-guard/issues"
+        target="_blank"
+        rel="noopener">
+        GitHub Issuesを開く
+      </a>
+
+      <a class="btn secondary" href="privacy.html">
+        プライバシーポリシー
+      </a>
+
+      <a class="btn secondary" href="support.html">
+        サポート案内
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section>
+  <div class="wrap">
+
+    <h2>免責事項</h2>
+
+    <div class="notice">
+      本アプリは、法律相談や個別の法的判断を提供するものではありません。
+      必要に応じて、弁護士、労働局、労働基準監督署などの専門機関へ
+      ご相談ください。
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+
+<footer>
+
+  <div class="wrap">
+
+    <div class="footrow">
+
+      <span>
+        © 2026 Freelance Guard
+      </span>
+
+      <span>
+        <a href="privacy.html">プライバシー</a>
+        ・
+        <a href="support.html">サポート</a>
+      </span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
