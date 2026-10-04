@@ -32,6 +32,12 @@ iPhone版とMac専用版は別のアプリです。機能とデータ形式は�
 
 [公式紹介ページ](https://sidebusiness1973-spec.github.io/freelance-guard/)
 
+## 開発用ソース
+
+[iPhone版・Mac版の開発用ソースをダウンロード](https://github.com/sidebusiness1973-spec/freelance-guard/raw/refs/heads/main/downloads/FreelanceGuard-source.zip)
+
+このZIPはXcodeで開く開発用ファイルです。インストール用アプリではありません。2026年10月4日のUI改善作業版を含み、未検証・未申請の変更があります。アプリを利用する場合は上記App Storeから入手してください。
+
 ## サポート
 
 [お問い合わせ・使い方](https://sidebusiness1973-spec.github.io/freelance-guard/support.html) · [プライバシーポリシー](https://sidebusiness1973-spec.github.io/freelance-guard/privacy.html)
